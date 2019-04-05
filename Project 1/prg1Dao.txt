@@ -1,0 +1,258 @@
+1                    J E S 2  J O B  L O G  --  S Y S T E M  S 0 W 1  --  N O D E  Z O S K C T R
+0
+ 00.52.13 JOB05043 ---- SATURDAY,  16 FEB 2019 ----
+ 00.52.13 JOB05043  IRR010I  USERID KC03CE3  IS ASSIGNED TO THIS JOB.
+ 00.52.13 JOB05043  IEF677I WARNING MESSAGE(S) FOR JOB KC03CE3X ISSUED
+ 00.52.13 JOB05043  ICH70001I KC03CE3  LAST ACCESS AT 00:48:59 ON SATURDAY, FEBRUARY 16, 2019
+ 00.52.13 JOB05043  $HASP373 KC03CE3X STARTED - INIT 2    - CLASS A        - SYS S0W1
+ 00.52.13 JOB05043  -                                         --TIMINGS (MINS.)--            ----PAGING COUNTS---
+ 00.52.13 JOB05043  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP    TCB    SRB  CLOCK   SERV  PG   PAGE   SWAP    VIO SWAPS
+ 00.52.13 JOB05043  -KC03CE3X                      00    410 ******    .00     .0    789   0      0      0      0     0
+ 00.52.13 JOB05043  -KC03CE3X                      00    171 ******    .00     .0    481   0      0      0      0     0
+ 00.52.14 JOB05043  -KC03CE3X                      00    250 ******    .00     .0    348   0      0      0      0     0
+ 00.52.14 JOB05043  -KC03CE3X ENDED.  NAME-DIEM                 TOTAL TCB CPU TIME=   .00  TOTAL ELAPSED TIME=    .0
+ 00.52.14 JOB05043  $HASP395 KC03CE3X ENDED
+0------ JES2 JOB STATISTICS ------
+-  16 FEB 2019 JOB EXECUTION DATE
+-          109 CARDS READ
+-          257 SYSOUT PRINT RECORDS
+-            0 SYSOUT PUNCH RECORDS
+-           18 SYSOUT SPOOL KBYTES
+-         0.00 MINUTES EXECUTION TIME
+         1 //KC03CE3X JOB 1,DIEM,LINES=(5,CANCEL),NOTIFY=KC03CE3,                  JOB05043
+           // MSGLEVEL=(2,0),MSGCLASS=A                                            00020000
+         2 //STEP2 EXEC PROC=IGYWCLG,LNGPRFX='IGY420',                             00030000
+           // PARM.COBOL='NOX'                                                     00040000
+        26 //SYSIN DD *                                                            00050000
+        30 //LKED.SYSPRINT DD DUMMY                                                00079805
+           //* REPLACE THE ? IN THE DSN BELOW WITH YOUR GROUP NUMBER               00079911
+        41 //GO.FILEIN DD DSN=KC02580.P1G5.DAT,DISP=SHR                            00080014
+        42 //GO.FILEOUT DD SYSOUT=A                                                00080100
+        43 //GO.SYSOUT DD SYSOUT=A                                                 00081000
+  STMT NO. MESSAGE
+         2 IEFC001I PROCEDURE IGYWCLG WAS EXPANDED USING SYSTEM LIBRARY USER.PROCLIB
+        35 IEF686I DDNAME REFERRED TO ON DDNAME KEYWORD IN PRIOR STEP WAS NOT RESOLVED
+ ICH70001I KC03CE3  LAST ACCESS AT 00:48:59 ON SATURDAY, FEBRUARY 16, 2019
+ IEF142I KC03CE3X COBOL STEP2 - STEP WAS EXECUTED - COND CODE 0000
+ IEF373I STEP/COBOL   /START 2019047.0052
+ IEF032I STEP/COBOL   /STOP  2019047.0052
+         CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:  8896K  SYS:   308K  EXT:  1580476K  SYS:    11524K
+         ATB- REAL:                    24K  SLOTS:                     0K
+              VIRT- ALLOC:       4M SHRD:       0M
+ IEF142I KC03CE3X LKED STEP2 - STEP WAS EXECUTED - COND CODE 0000
+ IEF373I STEP/LKED    /START 2019047.0052
+ IEF032I STEP/LKED    /STOP  2019047.0052
+         CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:    88K  SYS:   292K  EXT:     1640K  SYS:    11472K
+         ATB- REAL:                     0K  SLOTS:                     0K
+              VIRT- ALLOC:       0M SHRD:       0M
+ IEF142I KC03CE3X GO STEP2 - STEP WAS EXECUTED - COND CODE 0000
+ IEF373I STEP/GO      /START 2019047.0052
+ IEF032I STEP/GO      /STOP  2019047.0052
+         CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:   120K  SYS:   304K  EXT:     2944K  SYS:    11628K
+         ATB- REAL:                     0K  SLOTS:                     0K
+              VIRT- ALLOC:       0M SHRD:       0M
+ IEF375I  JOB/KC03CE3X/START 2019047.0052
+ IEF033I  JOB/KC03CE3X/STOP  2019047.0052
+         CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0                         Date 02/16/2019  Time 00:52:13   Page     1
+0Invocation parameters:
+  NOX
+0Options in effect:
+  NOADATA
+    ADV
+    QUOTE
+    ARITH(COMPAT)
+  NOAWO
+  NOBLOCK0
+    BUFSIZE(4096)
+  NOCICS
+    CODEPAGE(1140)
+  NOCOMPILE(S)
+  NOCURRENCY
+    DATA(31)
+  NODATEPROC
+    DBCS
+  NODECK
+  NODIAGTRUNC
+  NODLL
+  NODUMP
+  NODYNAM
+  NOEXIT
+  NOEXPORTALL
+  NOFASTSRT
+    FLAG(I,I)
+  NOFLAGMIG4
+  NOFLAGSTD
+    INTDATE(ANSI)
+    LANGUAGE(EN)
+  NOLIB
+    LINECOUNT(60)
+  NOLIST
+  NOMAP
+  NOMDECK
+  NONAME
+    NSYMBOL(NATIONAL)
+  NONUMBER
+    NUMPROC(NOPFD)
+    OBJECT
+  NOOFFSET
+  NOOPTIMIZE
+    OUTDD(SYSOUT)
+    PGMNAME(COMPAT)
+    RENT
+    RMODE(AUTO)
+    SEQUENCE
+    SIZE(MAX)
+    SOURCE
+    SPACE(1)
+  NOSQL
+    SQLCCSID
+  NOSSRANGE
+  NOTERM
+  NOTEST
+  NOTHREAD
+    TRUNC(STD)
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0                         Date 02/16/2019  Time 00:52:13   Page     2
+0 NOVBREF
+  NOWORD
+    XMLPARSE(XMLSS)
+  NOXREF
+    YEARWINDOW(1900)
+    ZWB
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               HEALINSU  Date 02/16/2019  Time 00:52:13   Page     3
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000001                IDENTIFICATION DIVISION.                                         00060013
+   000002                PROGRAM-ID. HEALINSU.                                            00070013
+   000003               *WRITTEN BY DIEM DAO CSCE 205                                     00070113
+   000004                ENVIRONMENT DIVISION.                                            00070213
+   000005                INPUT-OUTPUT SECTION.                                            00070313
+   000006                FILE-CONTROL.                                                    00070413
+   000007                    SELECT HI-FILE                                               00070513
+   000008                        ASSIGN TO FILEIN.                                        00070613
+   000009                    SELECT HI-REPORT                                             00070713
+   000010                        ASSIGN TO FILEOUT.                                       00070813
+   000011                DATA DIVISION.                                                   00070913
+   000012                FILE SECTION.                                                    00071013
+   000013                FD HI-FILE                                                       00071115
+   000014                    RECORDING MODE IS F.                                         00071215
+   000015                01 HI-RECORD                 PIC X(48).                          00071315
+   000016                FD HI-REPORT                                                     00071415
+   000017                    RECORDING MODE IS F.                                         00071515
+   000018                01 HI-REPORT-LINE            PIC X(66).                          00071615
+   000019                WORKING-STORAGE SECTION.                                         00071713
+   000020                01 WS-SWITCHES.                                                  00071813
+   000021                   05 WS-EOF-SWITCH          PIC X(3).                           00071913
+   000022                                                                                 00072014
+   000023                01 IR-HI-RECORD.                                                 00072114
+   000024                   05 IR-NAME.                                                   00072214
+   000025                      10 IR-LAST-NAME        PIC X(9).                           00072314
+   000026                      10 IR-FIRST-NAME       PIC X(9).                           00072414
+   000027                   05 IR-DOB                 PIC 9(8).                           00072514
+   000028                   05 IR-SSN-NUMBERS.                                            00072615
+   000029                      10 IR-SSN1             PIC 9(3).                           00072714
+   000030                      10 IR-SSN2             PIC 9(2).                           00072814
+   000031                      10 IR-SSN3             PIC 9(4).                           00072914
+   000032                   05 IR-GENDER              PIC X.                              00073014
+   000033                   05 IR-PHONE-NUM.                                              00073115
+   000034                      10 IR-PN1              PIC 9(3).                           00073215
+   000035                      10 IR-PN2              PIC 9(3).                           00073315
+   000036                      10 IR-PN3              PIC 9(4).                           00073415
+   000037                                                                                 00073514
+   000038                01 IL-HI-LINE.                                                   00073614
+   000039                   05                        PIC X VALUE SPACES.                 00073714
+   000040                   05 IL-LAST-NAME           PIC X(9).                           00073814
+   000041                   05                        PIC X(2) VALUE SPACES.              00073915
+   000042                   05 IL-FIRST-NAME          PIC X(9).                           00074014
+   000043                   05                        PIC X(2) VALUE SPACES.              00074115
+   000044                   05 IL-DOB                 PIC 99/99/9999.                     00074214
+   000045                   05                        PIC X(2) VALUE SPACES.              00074315
+   000046                   05 IL-SSN-NUMBERS.                                            00074414
+   000047                      10 IL-SSN1             PIC 9(3).                           00074514
+   000048                      10 IL-SSN-SEP-1        PIC X.                              00074614
+   000049                      10 IL-SSN2             PIC 9(2).                           00074714
+   000050                      10 IL-SSN-SEP-2        PIC X.                              00074814
+   000051                      10 IL-SSN3             PIC 9(4).                           00074914
+   000052                   05                        PIC X(2) VALUE SPACES.              00075015
+   000053                   05 IL-GENDER              PIC X.                              00075114
+   000054                   05                        PIC X(2) VALUE SPACES.              00075215
+   000055                   05 IL-PHONE-NUM.                                              00075315
+   000056                      10 IL-PN-SEP-1         PIC X.                              00075415
+   000057                      10 IL-PN1              PIC 9(3).                           00075515
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               HEALINSU  Date 02/16/2019  Time 00:52:13   Page     4
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000058                      10 IL-PN-SEP-2         PIC X.                              00075615
+   000059                      10 IL-PN2              PIC 9(3).                           00075715
+   000060                      10 IL-PN-SEP-3         PIC X.                              00075815
+   000061                      10 IL-PN3              PIC 9(4).                           00075915
+   000062                                                                                 00076014
+   000063                PROCEDURE DIVISION.                                              00076114
+   000064                000-PRINT-EVENT-REPORT.                                          00076214
+   000065                    OPEN INPUT HI-FILE                                           00076314
+   000066                         OUTPUT HI-REPORT                                        00076414
+   000067                    MOVE 'NO ' TO WS-EOF-SWITCH                                  00076514
+   000068                    PERFORM UNTIL WS-EOF-SWITCH = 'YES'                          00076614
+   000069      1                 READ HI-FILE                                             00076714
+   000070      1                      INTO IR-HI-RECORD                                   00076814
+   000071      1                   AT END                                                 00076914
+   000072      2                      MOVE 'YES' TO WS-EOF-SWITCH                         00077014
+   000073      1                   NOT AT END                                             00077114
+   000074      2                      PERFORM 200-PROCESS-RECORD                          00077214
+   000075      1                 END-READ                                                 00077314
+   000076                    END-PERFORM                                                  00077414
+   000077                    CLOSE HI-FILE                                                00077514
+   000078                          HI-REPORT                                              00077614
+   000079                    STOP RUN.                                                    00077714
+   000080                                                                                 00077814
+   000081                200-PROCESS-RECORD.                                              00077914
+   000082                    MOVE IR-LAST-NAME TO IL-LAST-NAME                            00078014
+   000083                    MOVE IR-FIRST-NAME TO IL-FIRST-NAME                          00078114
+   000084                    MOVE IR-DOB TO IL-DOB                                        00078214
+   000085                    MOVE IR-SSN1 TO IL-SSN1                                      00078314
+   000086                    MOVE IR-SSN2 TO IL-SSN2                                      00078414
+   000087                    MOVE IR-SSN3 TO IL-SSN3                                      00078514
+   000088                    MOVE '-' TO IL-SSN-SEP-1 IL-SSN-SEP-2 IL-PN-SEP-3            00078615
+   000089                    MOVE IR-GENDER TO IL-GENDER                                  00078714
+   000090                    MOVE IR-PN1 TO IL-PN1                                        00078815
+   000091                    MOVE IR-PN2 TO IL-PN2                                        00078915
+   000092                    MOVE IR-PN3 TO IL-PN3                                        00079015
+   000093                    MOVE '(' TO IL-PN-SEP-1                                      00079115
+   000094                    MOVE ')' TO IL-PN-SEP-2                                      00079215
+   000095                    MOVE IL-HI-LINE TO HI-REPORT-LINE                            00079314
+   000096                    WRITE HI-REPORT-LINE                                         00079414
+   000097                          AFTER ADVANCING 2 LINES                                00079514
+   000098                    .                                                            00079614
+-* Statistics for COBOL program HEALINSU:
+ *    Source records = 98
+ *    Data Division statements = 36
+ *    Procedure Division statements = 23
+0End of compilation 1,  program HEALINSU,  no statements flagged.
+0Return code 0
+0 Ellis      Mary       01/02/1990  215-21-1111  F  (443)980-3779
+0 Manuel     Barbara    02/20/1977  215-21-1222  F  (251)235-2893
+0 Needham    James      06/28/1952  215-21-1332  M  (717)202-9146
+0 Miller     Michael    04/18/1992  223-21-1112  M  (816)878-4991
+0 James      Wagner     10/11/9672  913-24-4324  9  (376)311-8267
+0 Lily       Collet     12/16/1987  364-48-8563  F  (989)729-8765
+0 Richard    Tanner     10/09/1978  143-72-9923  M  (732)384-9109
+0 Ruiz       Adam       02/07/1992  427-85-1934  M  (662)553-0129
+0 Brewer     Brooke     05/21/1968  233-35-1524  F  (212)103-2941
+0 Bennett    Timothy    11/12/1997  134-24-3949  M  (917)283-8492
+0 Smith      John       02/03/1988  323-16-9580  M  (803)811-2233
+0 Green      Bethany    12/25/1995  429-25-0193  F  (646)193-2942
+0 Jones      Bridgette  11/13/1966  803-00-1234  F  (803)987-0956
+0 Greene     Henry      05/23/1955  696-02-1122  M  (908)221-0456
+0 Jackson    Mary       04/22/1956  383-44-0340  F  (843)653-4443
+0 Johnson    Matt       09/21/1986  843-11-9878  M  (801)889-2289
+0 Drummond   Mike       08/30/1967  444-09-4356  M  (801)123-4445
+0 Jones      Jack       12/24/1990  280-44-1243  M  (803)230-9990
+0 Myers      Jessica    03/13/1994  123-03-9987  F  (634)033-9660
+0 Coleman    Kayla      05/28/1970  111-04-1387  F  (843)653-1454
+0 Clinton    Eaton      01/13/1987  132-13-1924  M  (619)584-4147
+0 Dennis     Thomas     03/02/1945  436-28-4524  M  (318)449-9145
+0 Lakesheia  Miller     04/30/1982  530-32-4253  M  (775)862-8761
+0 Dickerson  Timothy    01/12/1999  900-22-2223  M  (856)383-2485
+0 Whitacre   Cody       01/22/1988  311-32-1152  M  (806)624-6922
+
