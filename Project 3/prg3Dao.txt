@@ -1,0 +1,496 @@
+1                    J E S 2  J O B  L O G  --  S Y S T E M  S 0 W 1  --  N O D E  Z O S K C T R
+0
+ 23.08.04 JOB04569 ---- MONDAY,    01 APR 2019 ----
+ 23.08.04 JOB04569  IRR010I  USERID KC03CE3  IS ASSIGNED TO THIS JOB.
+ 23.08.04 JOB04569  IEF677I WARNING MESSAGE(S) FOR JOB KC03CE3X ISSUED
+ 23.08.04 JOB04569  ICH70001I KC03CE3  LAST ACCESS AT 23:06:06 ON MONDAY, APRIL 1, 2019
+ 23.08.04 JOB04569  $HASP373 KC03CE3X STARTED - INIT 2    - CLASS A        - SYS S0W1
+ 23.08.04 JOB04569  -                                         --TIMINGS (MINS.)--            ----PAGING COUNTS---
+ 23.08.04 JOB04569  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP    TCB    SRB  CLOCK   SERV  PG   PAGE   SWAP    VIO SWAPS
+ 23.08.04 JOB04569  -KC03CE3X                      00    441 ******    .00     .0    914   0      0      0      0     0
+ 23.08.04 JOB04569  -KC03CE3X                      00    182 ******    .00     .0    514   0      0      0      0     0
+ 23.08.04 JOB04569  -KC03CE3X                      00    961 ******    .00     .0    556   0      0      0      0     0
+ 23.08.04 JOB04569  -KC03CE3X ENDED.  NAME-DIEM                 TOTAL TCB CPU TIME=   .00  TOTAL ELAPSED TIME=    .0
+ 23.08.04 JOB04569  $HASP395 KC03CE3X ENDED
+0------ JES2 JOB STATISTICS ------
+-  01 APR 2019 JOB EXECUTION DATE
+-          319 CARDS READ
+-          495 SYSOUT PRINT RECORDS
+-            0 SYSOUT PUNCH RECORDS
+-           42 SYSOUT SPOOL KBYTES
+-         0.01 MINUTES EXECUTION TIME
+         1 //KC03CE3X JOB 1,DIEM,LINES=(5,CANCEL),NOTIFY=KC03CE3,                  JOB04569
+           // MSGLEVEL=(2,0),MSGCLASS=A                                            00020000
+         2 //STEP2 EXEC PROC=IGYWCLG,LNGPRFX='IGY420',                             00030000
+           // PARM.COBOL='NOX'                                                     00040000
+        26 //SYSIN DD *                                                            00050000
+        30 //LKED.SYSPRINT DD DUMMY                                                00106200
+           //* REPLACE THE ? IN THE DSN BELOW WITH YOUR GROUP NUMBER               00106300
+        41 //GO.FILEIN DD DSN=KC02580.P3G5.DAT,DISP=SHR                            00106400
+        42 //GO.FILEOUT DD SYSOUT=A                                                00106500
+        43 //GO.SYSOUT DD SYSOUT=A                                                 00107000
+  STMT NO. MESSAGE
+         2 IEFC001I PROCEDURE IGYWCLG WAS EXPANDED USING SYSTEM LIBRARY USER.PROCLIB
+        35 IEF686I DDNAME REFERRED TO ON DDNAME KEYWORD IN PRIOR STEP WAS NOT RESOLVED
+ ICH70001I KC03CE3  LAST ACCESS AT 23:06:06 ON MONDAY, APRIL 1, 2019
+ IEF142I KC03CE3X COBOL STEP2 - STEP WAS EXECUTED - COND CODE 0000
+ IEF373I STEP/COBOL   /START 2019091.2308
+ IEF032I STEP/COBOL   /STOP  2019091.2308
+         CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:  8896K  SYS:   308K  EXT:  1579236K  SYS:    11680K
+         ATB- REAL:                    24K  SLOTS:                     0K
+              VIRT- ALLOC:       4M SHRD:       0M
+ IEF142I KC03CE3X LKED STEP2 - STEP WAS EXECUTED - COND CODE 0000
+ IEF373I STEP/LKED    /START 2019091.2308
+ IEF032I STEP/LKED    /STOP  2019091.2308
+         CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:    88K  SYS:   300K  EXT:     1640K  SYS:    11624K
+         ATB- REAL:                     0K  SLOTS:                     0K
+              VIRT- ALLOC:       0M SHRD:       0M
+ IEF142I KC03CE3X GO STEP2 - STEP WAS EXECUTED - COND CODE 0000
+ IEF373I STEP/GO      /START 2019091.2308
+ IEF032I STEP/GO      /STOP  2019091.2308
+         CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:   120K  SYS:   304K  EXT:     2936K  SYS:    11676K
+         ATB- REAL:                     0K  SLOTS:                     0K
+              VIRT- ALLOC:       0M SHRD:       0M
+ IEF375I  JOB/KC03CE3X/START 2019091.2308
+ IEF033I  JOB/KC03CE3X/STOP  2019091.2308
+         CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0                         Date 04/01/2019  Time 23:08:04   Page     1
+0Invocation parameters:
+  NOX
+0Options in effect:
+  NOADATA
+    ADV
+    QUOTE
+    ARITH(COMPAT)
+  NOAWO
+  NOBLOCK0
+    BUFSIZE(4096)
+  NOCICS
+    CODEPAGE(1140)
+  NOCOMPILE(S)
+  NOCURRENCY
+    DATA(31)
+  NODATEPROC
+    DBCS
+  NODECK
+  NODIAGTRUNC
+  NODLL
+  NODUMP
+  NODYNAM
+  NOEXIT
+  NOEXPORTALL
+  NOFASTSRT
+    FLAG(I,I)
+  NOFLAGMIG4
+  NOFLAGSTD
+    INTDATE(ANSI)
+    LANGUAGE(EN)
+  NOLIB
+    LINECOUNT(60)
+  NOLIST
+  NOMAP
+  NOMDECK
+  NONAME
+    NSYMBOL(NATIONAL)
+  NONUMBER
+    NUMPROC(NOPFD)
+    OBJECT
+  NOOFFSET
+  NOOPTIMIZE
+    OUTDD(SYSOUT)
+    PGMNAME(COMPAT)
+    RENT
+    RMODE(AUTO)
+    SEQUENCE
+    SIZE(MAX)
+    SOURCE
+    SPACE(1)
+  NOSQL
+    SQLCCSID
+  NOSSRANGE
+  NOTERM
+  NOTEST
+  NOTHREAD
+    TRUNC(STD)
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0                         Date 04/01/2019  Time 23:08:04   Page     2
+0 NOVBREF
+  NOWORD
+    XMLPARSE(XMLSS)
+  NOXREF
+    YEARWINDOW(1900)
+    ZWB
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               ONEPIZZA  Date 04/01/2019  Time 23:08:04   Page     3
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000001                IDENTIFICATION DIVISION.                                         00060000
+   000002                PROGRAM-ID. ONEPIZZA.                                            00070000
+   000003               *WRITTEN BY DIEM DAO CSCE 205                                     00070100
+   000004               *3/20/2019                                                        00070201
+   000005                ENVIRONMENT DIVISION.                                            00070300
+   000006                INPUT-OUTPUT SECTION.                                            00070400
+   000007                FILE-CONTROL.                                                    00070500
+   000008                    SELECT PIZZA-FILE                                            00070600
+   000009                        ASSIGN TO FILEIN.                                        00070700
+   000010                    SELECT PIZZA-REPORT                                          00070800
+   000011                        ASSIGN TO FILEOUT.                                       00070900
+   000012                DATA DIVISION.                                                   00071000
+   000013                FILE SECTION.                                                    00071100
+   000014                FD PIZZA-FILE                                                    00071200
+   000015                    RECORDING MODE IS F.                                         00071300
+   000016                01 PIZZA-RECORD              PIC X(38).                          00071402
+   000017                FD PIZZA-REPORT                                                  00071500
+   000018                    RECORDING MODE IS F.                                         00071600
+   000019                01 PIZZA-REPORT-LIST         PIC X(125).                         00071702
+   000020                WORKING-STORAGE SECTION.                                         00071800
+   000021               *SWITCHES                                                         00071901
+   000022                01 WS-SWITCHES.                                                  00072000
+   000023                   05 S1-EOF-SWITCH          PIC X.                              00072101
+   000024                      88 S1-EOF              VALUE 'E'.                          00072201
+   000025                      88 S1-NOT-EOF          VALUE 'N'.                          00072301
+   000026                   05 S2-FIRST-RECORD-SWITCH    PIC X.                           00072401
+   000027                      88 S2-FIRST-RECORD        VALUE 'F'.                       00072501
+   000028                      88 S2-NOT-FIRST-RECORD    VALUE 'N'.                       00072601
+   000029                                                                                 00072701
+   000030               *REPORT CONTROL FIELDS                                            00072801
+   000031                01 RC-REPORT-CONTROLS.                                           00072901
+   000032                   05 RC-PAGE-COUNT             PIC 9(4).                        00073001
+   000033                   05 RC-LINES-PER-PAGE         PIC 9(2) VALUE 54.               00073101
+   000034                   05 RC-LINES-USED             PIC 9(2).                        00073201
+   000035                   05 RC-LINE-SPACING           PIC 9(2).                        00073301
+   000036                   05 RC-PREVIOUS-MAJOR         PIC X(5).                        00073401
+   000037                   05 RC-PREVIOUS-MINOR         PIC X(9).                        00073501
+   000038               *WORK AREAS                                                       00073601
+   000039                01 WA-WORK-AREAS.                                                00073701
+   000040                   05 WA-DATE-WORK              PIC 9(6).                        00073801
+   000041               *INITIALIZE                                                       00073901
+   000042                01 ARITHMETIC-WORK-AREA.                                         00074000
+   000043                   05 AW-TOTAL-PIZZA         PIC 9999V99.                        00074100
+   000044                   05 AW-TOTAL-DRINK         PIC 9999V99.                        00074200
+   000045                   05 AW-TOTAL-CHG           PIC 9999V99.                        00074300
+   000046                   05 AW-CUSTOMER-COUNTER    PIC 999.                            00074400
+   000047                   05 AW-TOTAL-REVENUE       PIC 99999V99.                       00074500
+   000048                   05 AW-TOTAL-MAJOR         PIC 99999V99.                       00074602
+   000049                   05 AW-TOTAL-SALES         PIC 99999V99.                       00074702
+   000050                                                                                 00074801
+   000051               *INPUT RECORD                                                     00074901
+   000052                01 IR-PIZZA-RECORD.                                              00075000
+   000053                   05 IR-PIZZA-OR-DRINK      PIC X(5).                           00075101
+   000054                   05 IR-TYPES               PIC X(9).                           00075201
+   000055                   05 IR-CUSTOMER.                                               00075300
+   000056                      10 IR-LAST-NAME        PIC X(9).                           00075400
+   000057                      10 IR-FIRST-NAME       PIC X(9).                           00075500
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               ONEPIZZA  Date 04/01/2019  Time 23:08:04   Page     4
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000058                   05 IR-NUMBER-PIZZA        PIC 9(3).                           00075600
+   000059                   05 IR-NUMBER-DRINK        PIC 9(3).                           00075700
+   000060                                                                                 00075801
+   000061               *OUTPUT LINE                                                      00075901
+   000062                01 IL-PIZZA-LINE.                                                00076000
+   000063                   05                        PIC X(1) VALUE SPACES.              00076102
+   000064                   05 IL-PIZZA-OR-DRINK      PIC X(5).                           00076202
+   000065                   05                        PIC X(4) VALUE SPACES.              00076302
+   000066                   05 IL-TYPES               PIC X(9).                           00076402
+   000067                   05                        PIC X(2) VALUE SPACES.              00076502
+   000068                   05 IL-LAST-NAME           PIC X(9).                           00076600
+   000069                   05                        PIC X(2) VALUE SPACES.              00076700
+   000070                   05 IL-FIRST-NAME          PIC X(9).                           00076800
+   000071                   05                        PIC X(5) VALUE SPACES.              00076900
+   000072                   05 IL-NUMBER-PIZZA        PIC 9(3).                           00077000
+   000073                   05                        PIC X(4) VALUE SPACES.              00077100
+   000074                   05 IL-TOTAL-PIZZA         PIC $Z,ZZ9.99.                      00077200
+   000075                   05                        PIC X(6)  VALUE SPACES.             00077300
+   000076                   05 IL-NUMBER-DRINK        PIC 9(3).                           00077400
+   000077                   05                        PIC X(4) VALUE SPACES.              00077500
+   000078                   05 IL-TOTAL-DRINK         PIC $Z,ZZ9.99.                      00077600
+   000079                   05                        PIC X(4) VALUE SPACES.              00077700
+   000080                   05 IL-TOTAL-CHG           PIC  $Z,ZZ9.99.                     00077800
+   000081                                                                                 00077902
+   000082               *HEADING LINES                                                    00078002
+   000083                01 HL1-HEADING-LINE-1.                                           00078100
+   000084                   05            PIC X(16) VALUE 'ONE DOLLAR PIZZA'.             00078202
+   000085                   05            PIC X(26) VALUE ' RESTAURANT REVENUE REPORT'.   00078302
+   000086                   05            PIC X(15) VALUE SPACES.                         00078402
+   000087                   05            PIC X(5) VALUE 'PAGE '.                         00078504
+   000088                   05 H1-PAGE-NBR            PIC ZZZ9.                           00078602
+   000089                01 HL2-HEADING-LINE-2.                                           00078803
+   000090                   05            PIC X(4) VALUE 'DATE'.                          00078903
+   000091                   05            PIC X(30) VALUE SPACES.                         00079003
+   000092                   05 H2-MONTH   PIC 9(2).                                       00079103
+   000093                   05            PIC X(1) VALUE '/'.                             00079203
+   000094                   05 H2-DAY     PIC 9(2).                                       00079303
+   000095                   05            PIC X(1) VALUE '/'.                             00079403
+   000096                   05 H2-YEAR    PIC 9(2).                                       00079503
+   000097                01 HL3-HEADING-LINE-3.                                           00079603
+   000098                   05            PIC X(5) VALUE SPACES.                          00079703
+   000099                   05            PIC X(29) VALUE 'BY TYPE WITHIN PIZZA OR DRINK'.00079803
+   000100                01 HL4-HEADING-LINE-4.                                           00079903
+   000101                   05            PIC X(31) VALUE SPACES.                         00080003
+   000102                   05 H4-TYPE    PIC X(4).                                       00080103
+   000103                   05            PIC X(45) VALUE SPACES.                         00080203
+   000104                01 HL5-HEADING-LINE-5.                                           00080303
+   000105                   05            PIC X VALUE SPACES.                             00080403
+   000106                   05            PIC X(5) VALUE 'MAJOR'.                         00080505
+   000107                   05            PIC X(4) VALUE SPACES.                          00080605
+   000108                   05            PIC X(4) VALUE 'TYPE'.                          00080703
+   000109                   05            PIC X(6) VALUE SPACES.                          00080805
+   000110                   05            PIC X(9) VALUE 'LAST NAME'.                     00080900
+   000111                   05            PIC X(2) VALUE SPACES.                          00081000
+   000112                   05            PIC X(10) VALUE 'FIRST NAME'.                   00081100
+   000113                   05            PIC X(4) VALUE SPACES.                          00081205
+   000114                   05            PIC X(6) VALUE 'PIZZAS'.                        00081300
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               ONEPIZZA  Date 04/01/2019  Time 23:08:04   Page     5
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000115                   05            PIC X(2) VALUE SPACES.                          00081400
+   000116                   05            PIC X(9)  VALUE 'PIZZA CHG'.                    00081500
+   000117                   05            PIC X(5) VALUE SPACES.                          00081600
+   000118                   05            PIC X(6) VALUE 'DRINKS'.                        00081700
+   000119                   05            PIC X(2) VALUE SPACES.                          00081800
+   000120                   05            PIC X(9)  VALUE 'DRINK CHG'.                    00081900
+   000121                   05            PIC X(4) VALUE SPACES.                          00082000
+   000122                   05            PIC X(9) VALUE 'TOTAL CHG'.                     00082100
+   000123                                                                                 00082203
+   000124               *TOTAL LINE DEFINITIONS                                           00082303
+   000125                01 CT-CONTROL-TOTAL-LINE.                                        00082403
+   000126                   05            PIC X(60) VALUE SPACES.                         00082505
+   000127                   05 CT-TOTAL-DESCRIPTION    PIC X(30).                         00082605
+   000128                   05 CT-TOTAL                PIC $Z,ZZ9.99.                     00082703
+   000129                                                                                 00082803
+   000130                PROCEDURE DIVISION.                                              00083300
+   000131                000-PRINT-EARNINGS-REPORT.                                       00083403
+   000132               ***********   INITIALIZATION SEQUENCE **********                  00083503
+   000133                    OPEN INPUT PIZZA-FILE                                        00083603
+   000134                        OUTPUT PIZZA-REPORT                                      00086403
+   000135                    PERFORM 100-INITIALIZE-VARIABLE-FIELDS                       00088703
+   000136               ************* PROCESSING     SEQUENCE *************               00088803
+   000137                    PERFORM UNTIL S1-EOF                                         00088903
+   000138                                                                                 00089003
+   000139      1                 READ PIZZA-FILE                                          00089103
+   000140      1                         INTO IR-PIZZA-RECORD                             00089203
+   000141      1                   AT END                                                 00089303
+   000142      2                      SET S1-EOF TO TRUE                                  00089403
+   000143      2                      PERFORM 250-PROCESS-BREAK                           00089503
+   000144      1                   NOT AT END                                             00089603
+   000145      2                      PERFORM 250-PROCESS-BREAK                           00089703
+   000146      2                      PERFORM 200-PROCESS-DETAIL-RECORD                   00089803
+   000147      1                 END-READ                                                 00089903
+   000148                    END-PERFORM                                                  00090003
+   000149               ************* TERMINATION    SEQUENCE *************               00090103
+   000150                    CLOSE PIZZA-FILE                                             00090203
+   000151                          PIZZA-REPORT                                           00090303
+   000152                    STOP RUN                                                     00090403
+   000153                    .                                                            00090503
+   000154               ***************************************************               00090603
+   000155                100-INITIALIZE-VARIABLE-FIELDS.                                  00090703
+   000156                    SET S1-NOT-EOF TO TRUE                                       00090803
+   000157                    SET S2-FIRST-RECORD TO TRUE                                  00090903
+   000158                                                                                 00091003
+   000159                    ACCEPT WA-DATE-WORK FROM DATE                                00091103
+   000160                    MOVE WA-DATE-WORK(3:2) TO H2-MONTH                           00091203
+   000161                    MOVE WA-DATE-WORK(5:2) TO H2-DAY                             00091303
+   000162                    MOVE WA-DATE-WORK(1:2) TO H2-YEAR                            00091403
+   000163                                                                                 00091503
+   000164                    INITIALIZE ARITHMETIC-WORK-AREA                              00091603
+   000165                               RC-PAGE-COUNT                                     00091703
+   000166                    .                                                            00091803
+   000167                                                                                 00091903
+   000168                120-ARITHMETIC.                                                  00092003
+   000169                    MULTIPLY IL-NUMBER-PIZZA BY 1 GIVING AW-TOTAL-PIZZA          00092103
+   000170                    MULTIPLY IL-NUMBER-DRINK BY 2 GIVING AW-TOTAL-DRINK          00092203
+   000171                    ADD AW-TOTAL-PIZZA AW-TOTAL-DRINK GIVING AW-TOTAL-CHG        00092303
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               ONEPIZZA  Date 04/01/2019  Time 23:08:04   Page     6
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000172                    ADD 1 TO AW-CUSTOMER-COUNTER                                 00092403
+   000173                    ADD AW-TOTAL-CHG TO AW-TOTAL-REVENUE                         00092503
+   000174                    .                                                            00092603
+   000175                                                                                 00092703
+   000176                200-PROCESS-DETAIL-RECORD.                                       00092803
+   000177                    IF RC-LINES-USED >= RC-LINES-PER-PAGE                        00092903
+   000178      1                 PERFORM 870-PRINT-REPORT-HEADINGS                        00093003
+   000179                    END-IF                                                       00093103
+   000180                                                                                 00093203
+   000181                    PERFORM 600-PRINT-DETAIL-LINE                                00093303
+   000182               *****PERFORM 120-ARITHMETIC                                       00093405
+   000183                    MOVE SPACES TO IL-PIZZA-OR-DRINK                             00093503
+   000184                                   IL-TYPES                                      00093603
+   000185                    .                                                            00093703
+   000186                                                                                 00093803
+   000187                250-PROCESS-BREAK.                                               00093903
+   000188                    EVALUATE TRUE                                                00094003
+   000189                      WHEN S2-FIRST-RECORD                                       00094103
+   000190      1                 MOVE IR-TYPES                                            00094203
+   000191      1                     TO RC-PREVIOUS-MINOR                                 00094303
+   000192      1                        IL-TYPES                                          00094403
+   000193      1                 MOVE IR-PIZZA-OR-DRINK TO RC-PREVIOUS-MAJOR              00094503
+   000194      1                                                 IL-PIZZA-OR-DRINK        00094603
+   000195      1                 PERFORM 870-PRINT-REPORT-HEADINGS                        00094703
+   000196      1                 SET S2-NOT-FIRST-RECORD TO TRUE                          00094803
+   000197                                                                                 00094903
+   000198                      WHEN IR-PIZZA-OR-DRINK NOT = RC-PREVIOUS-MAJOR             00095003
+   000199      1                 PERFORM 610-PROCESS-END-OF-MINOR                         00095103
+   000200      1                 PERFORM 620-PROCESS-END-OF-MAJOR                         00095203
+   000201                                                                                 00095303
+   000202                      WHEN IR-TYPES NOT = RC-PREVIOUS-MINOR                      00095403
+   000203      1                 PERFORM 610-PROCESS-END-OF-MINOR                         00095503
+   000204                                                                                 00095603
+   000205                      WHEN S1-EOF                                                00095703
+   000206      1                 PERFORM 610-PROCESS-END-OF-MINOR                         00095803
+   000207      1                 PERFORM 620-PROCESS-END-OF-MAJOR                         00095903
+   000208      1                 PERFORM 700-PRINT-REPORT-TOTAL-LINE                      00096003
+   000209                    END-EVALUATE                                                 00096103
+   000210                    .                                                            00096203
+   000211                                                                                 00096303
+   000212                600-PRINT-DETAIL-LINE.                                           00096403
+   000213                    MOVE IR-LAST-NAME TO IL-LAST-NAME                            00096503
+   000214                    MOVE IR-FIRST-NAME TO IL-FIRST-NAME                          00096603
+   000215                    MOVE IR-NUMBER-PIZZA TO IL-NUMBER-PIZZA                      00096703
+   000216                    MOVE IR-NUMBER-DRINK TO IL-NUMBER-DRINK                      00096803
+   000217                    PERFORM 120-ARITHMETIC                                       00096905
+   000218                    MOVE AW-TOTAL-PIZZA TO IL-TOTAL-PIZZA                        00097005
+   000219                    MOVE AW-TOTAL-DRINK TO IL-TOTAL-DRINK                        00097105
+   000220                    MOVE AW-TOTAL-CHG TO IL-TOTAL-CHG                            00097205
+   000221                    MOVE IL-PIZZA-LINE TO PIZZA-REPORT-LIST                      00097303
+   000222                    PERFORM 890-WRITE-REPORT-LINE                                00097403
+   000223                    MOVE 1 TO RC-LINE-SPACING                                    00097503
+   000224                    .                                                            00097603
+   000225                                                                                 00097703
+   000226                610-PROCESS-END-OF-MINOR.                                        00097803
+   000227                    MOVE 'TOTAL CHARGE FOR TYPES: ' TO CT-TOTAL-DESCRIPTION      00097905
+   000228                    MOVE AW-TOTAL-REVENUE TO CT-TOTAL                            00098003
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               ONEPIZZA  Date 04/01/2019  Time 23:08:04   Page     7
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000229                    MOVE CT-CONTROL-TOTAL-LINE TO PIZZA-REPORT-LIST              00098103
+   000230                    MOVE 2 TO RC-LINE-SPACING                                    00098203
+   000231                    PERFORM 890-WRITE-REPORT-LINE                                00098303
+   000232                    MOVE 2 TO RC-LINE-SPACING                                    00098403
+   000233                    ADD AW-TOTAL-REVENUE TO AW-TOTAL-MAJOR                       00098503
+   000234                    IF S1-NOT-EOF                                                00098603
+   000235      1                 MOVE IR-TYPES TO RC-PREVIOUS-MINOR                       00098703
+   000236      1                 MOVE ZEROS TO AW-TOTAL-REVENUE                           00098803
+   000237      1                 MOVE IR-TYPES TO IL-TYPES                                00098903
+   000238                    END-IF                                                       00099003
+   000239                    .                                                            00099103
+   000240                620-PROCESS-END-OF-MAJOR.                                        00099203
+   000241                    MOVE 'TOTAL CHAGE FOR MAJOR: ' TO CT-TOTAL-DESCRIPTION       00099305
+   000242                    MOVE AW-TOTAL-MAJOR TO CT-TOTAL                              00099403
+   000243                    MOVE CT-CONTROL-TOTAL-LINE TO PIZZA-REPORT-LIST              00099503
+   000244                    MOVE 2 TO RC-LINE-SPACING                                    00099603
+   000245                    PERFORM 890-WRITE-REPORT-LINE                                00099703
+   000246                    MOVE 2 TO RC-LINE-SPACING                                    00099803
+   000247                    ADD AW-TOTAL-MAJOR TO AW-TOTAL-SALES                         00099903
+   000248                    IF S1-NOT-EOF                                                00100003
+   000249      1                 MOVE IR-PIZZA-OR-DRINK TO RC-PREVIOUS-MAJOR              00100103
+   000250      1                 MOVE ZEROS TO AW-TOTAL-MAJOR                             00100203
+   000251      1                 MOVE RC-LINES-PER-PAGE TO RC-LINES-USED                  00100303
+   000252      1                 MOVE IR-PIZZA-OR-DRINK TO IL-PIZZA-OR-DRINK              00100403
+   000253      1                 PERFORM 870-PRINT-REPORT-HEADINGS                        00100503
+   000254                    END-IF                                                       00100603
+   000255                    .                                                            00100703
+   000256                700-PRINT-REPORT-TOTAL-LINE.                                     00100803
+   000257                    MOVE 'REPORT TOTAL:   ' TO CT-TOTAL-DESCRIPTION              00100903
+   000258                    MOVE AW-TOTAL-SALES TO CT-TOTAL                              00101003
+   000259                    MOVE CT-CONTROL-TOTAL-LINE TO PIZZA-REPORT-LIST              00101103
+   000260                    MOVE 3 TO RC-LINE-SPACING                                    00101203
+   000261                    PERFORM 890-WRITE-REPORT-LINE                                00101303
+   000262                    .                                                            00101403
+   000263                870-PRINT-REPORT-HEADINGS.                                       00101503
+   000264                    ADD 1 TO RC-PAGE-COUNT                                       00101603
+   000265                    MOVE RC-PAGE-COUNT TO H1-PAGE-NBR                            00101703
+   000266                                                                                 00101803
+   000267                    EVALUATE TRUE                                                00101903
+   000268                      WHEN IL-PIZZA-OR-DRINK = "PIZZA"                           00102003
+   000269      1                 MOVE "PIZZA" TO H4-TYPE                                  00102103
+   000270                      WHEN  IL-PIZZA-OR-DRINK = "DRINK"                          00102203
+   000271      1                 MOVE "DRINK" TO H4-TYPE                                  00102303
+   000272                      WHEN OTHER                                                 00102403
+   000273      1                 MOVE '****' TO H4-TYPE                                   00102503
+   000274                    END-EVALUATE                                                 00102603
+   000275                                                                                 00102703
+   000276                    MOVE HL1-HEADING-LINE-1 TO PIZZA-REPORT-LIST                 00102803
+   000277                    PERFORM 880-WRITE-REPORT-TOP-LINE                            00102903
+   000278                                                                                 00103003
+   000279                    MOVE HL2-HEADING-LINE-2 TO PIZZA-REPORT-LIST                 00103103
+   000280                    MOVE 1 TO RC-LINE-SPACING                                    00103203
+   000281                    PERFORM 890-WRITE-REPORT-LINE                                00103303
+   000282                                                                                 00103403
+   000283                    MOVE HL3-HEADING-LINE-3 TO PIZZA-REPORT-LIST                 00103503
+   000284                    MOVE 1 TO RC-LINE-SPACING                                    00103603
+   000285                    PERFORM 890-WRITE-REPORT-LINE                                00103703
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               ONEPIZZA  Date 04/01/2019  Time 23:08:04   Page     8
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000286                                                                                 00103803
+   000287                    MOVE HL4-HEADING-LINE-4 TO PIZZA-REPORT-LIST                 00103903
+   000288                    MOVE 2 TO RC-LINE-SPACING                                    00104003
+   000289                    PERFORM 890-WRITE-REPORT-LINE                                00104103
+   000290                                                                                 00104203
+   000291                    MOVE HL5-HEADING-LINE-5 TO PIZZA-REPORT-LIST                 00104303
+   000292                    MOVE 2 TO RC-LINE-SPACING                                    00104403
+   000293                    PERFORM 890-WRITE-REPORT-LINE                                00104503
+   000294                                                                                 00104603
+   000295                    MOVE 2 TO RC-LINE-SPACING                                    00104703
+   000296                    .                                                            00104803
+   000297                                                                                 00104903
+   000298                880-WRITE-REPORT-TOP-LINE.                                       00105003
+   000299                    WRITE PIZZA-REPORT-LIST                                      00105103
+   000300                        AFTER ADVANCING PAGE                                     00105203
+   000301                    MOVE 1 TO RC-LINES-USED                                      00105303
+   000302                    .                                                            00105403
+   000303                                                                                 00105503
+   000304                890-WRITE-REPORT-LINE.                                           00105603
+   000305                    WRITE PIZZA-REPORT-LIST                                      00105703
+   000306                        AFTER ADVANCING RC-LINE-SPACING                          00105803
+   000307                    ADD RC-LINE-SPACING TO RC-LINES-USED                         00105903
+   000308                    .                                                            00106003
+-* Statistics for COBOL program ONEPIZZA:
+ *    Source records = 308
+ *    Data Division statements = 57
+ *    Procedure Division statements = 102
+0End of compilation 1,  program ONEPIZZA,  no statements flagged.
+0Return code 0
+1ONE DOLLAR PIZZA RESTAURANT REVENUE REPORT               PAGE    1
+ DATE                              04/01/19
+      BY TYPE WITHIN PIZZA OR DRINK
+0                               ****
+0 MAJOR    TYPE      LAST NAME  FIRST NAME    PIZZAS  PIZZA CHG     DRINKS  DRINK CHG    TOTAL CHG
+0 Drink    Coke       Greene     Henry         002    $    2.00      031    $   62.00    $   64.00
+                      Clinton    Eaton         050    $   50.00      092    $  184.00    $  234.00
+                      Myers      Jessica       003    $    3.00      010    $   20.00    $   23.00
+                      Coleman    Kayla         010    $   10.00      004    $    8.00    $   18.00
+                      Drummond   Mike          021    $   21.00      041    $   82.00    $  103.00
+                      Jones      Jack          030    $   30.00      030    $   60.00    $   90.00
+                      Jackson    Mary          003    $    3.00      002    $    4.00    $    7.00
+                      Johnson    Matt          012    $   12.00      003    $    6.00    $   18.00
+0                                                            TOTAL CHARGE FOR TYPES:       $  557.00
+0          Sprite     Jones      Bridgette     134    $  134.00      021    $   42.00    $  176.00
+                      Smith      John          008    $    8.00      010    $   20.00    $   28.00
+                      Green      Bethany       002    $    2.00      055    $  110.00    $  112.00
+0                                                            TOTAL CHARGE FOR TYPES:       $  316.00
+0          Water      Whitacre   Cody          032    $   32.00      035    $   70.00    $  102.00
+                      Lakesheia  Miller        021    $   21.00      031    $   62.00    $   83.00
+                      Dickerson  Timothy       034    $   34.00      032    $   64.00    $   98.00
+                      Dennis     Thomas        042    $   42.00      056    $  112.00    $  154.00
+0                                                            TOTAL CHARGE FOR TYPES:       $  437.00
+0                                                            TOTAL CHAGE FOR MAJOR:        $1,310.00
+1ONE DOLLAR PIZZA RESTAURANT REVENUE REPORT               PAGE    2
+ DATE                              04/01/19
+      BY TYPE WITHIN PIZZA OR DRINK
+0                               ****
+0 MAJOR    TYPE      LAST NAME  FIRST NAME    PIZZAS  PIZZA CHG     DRINKS  DRINK CHG    TOTAL CHG
+0 Pizza    Bacon      Miller     Michael       059    $   59.00      067    $  134.00    $  193.00
+                      Bennett    Timothy       123    $  123.00      100    $  200.00    $  323.00
+0                                                            TOTAL CHARGE FOR TYPES:       $  516.00
+0          Cheese     Needham    James         023    $   23.00      091    $  182.00    $  205.00
+                      Brewer     Brooke        028    $   28.00      051    $  102.00    $  130.00
+0                                                            TOTAL CHARGE FOR TYPES:       $  335.00
+0          Mushroom   Manuel     Barbara       020    $   20.00      044    $   88.00    $  108.00
+                      Richard    Tanner        051    $   51.00      056    $  112.00    $  163.00
+                      Ruiz       Adam          002    $    2.00      001    $    2.00    $    4.00
+0                                                            TOTAL CHARGE FOR TYPES:       $  275.00
+0          Pepperoni  Ellis      Mary          100    $  100.00      092    $  184.00    $  284.00
+                      James      Wagner        101    $  101.00      120    $  240.00    $  341.00
+                      Lily       Collet        095    $   95.00      100    $  200.00    $  295.00
+0                                                            TOTAL CHARGE FOR TYPES:       $  920.00
+0                                                            TOTAL CHAGE FOR MAJOR:        $2,046.00
+-                                                            REPORT TOTAL:                 $3,356.00
+
