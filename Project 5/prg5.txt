@@ -1,0 +1,506 @@
+1                    J E S 2  J O B  L O G  --  S Y S T E M  S 0 W 1  --  N O D E  Z O S K C T R
+0
+ 15.19.03 JOB05717 ---- TUESDAY,   30 APR 2019 ----
+ 15.19.03 JOB05717  IRR010I  USERID KC03CE3  IS ASSIGNED TO THIS JOB.
+ 15.19.03 JOB05717  IEF677I WARNING MESSAGE(S) FOR JOB KC03CE3X ISSUED
+ 15.19.03 JOB05717  ICH70001I KC03CE3  LAST ACCESS AT 15:14:56 ON TUESDAY, APRIL 30, 2019
+ 15.19.03 JOB05717  $HASP373 KC03CE3X STARTED - INIT 2    - CLASS A        - SYS S0W1
+ 15.19.03 JOB05717  -                                         --TIMINGS (MINS.)--            ----PAGING COUNTS---
+ 15.19.03 JOB05717  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP    TCB    SRB  CLOCK   SERV  PG   PAGE   SWAP    VIO SWAPS
+ 15.19.03 JOB05717  -KC03CE3X                      00    441 ******    .00     .0    924   0      0      0      0     0
+ 15.19.04 JOB05717  -KC03CE3X                      00    189 ******    .00     .0    576   0      0      0      0     0
+ 15.19.04 JOB05717  -KC03CE3X                      00    285 ******    .00     .0    502   0      0      0      0     0
+ 15.19.04 JOB05717  -KC03CE3X ENDED.  NAME-DIEMDAO              TOTAL TCB CPU TIME=   .00  TOTAL ELAPSED TIME=    .0
+ 15.19.04 JOB05717  $HASP395 KC03CE3X ENDED
+0------ JES2 JOB STATISTICS ------
+-  30 APR 2019 JOB EXECUTION DATE
+-          299 CARDS READ
+-          505 SYSOUT PRINT RECORDS
+-            0 SYSOUT PUNCH RECORDS
+-           39 SYSOUT SPOOL KBYTES
+-         0.00 MINUTES EXECUTION TIME
+         1 //KC03CE3X JOB 1,DIEMDAO,LINES=(5,CANCEL),NOTIFY=KC03CE3,               JOB05717
+           //  MSGLEVEL=(2,0),MSGCLASS=A                                           00000200
+         2 //STEP2 EXEC PROC=IGYWCLG,LNGPRFX='IGY420',                             00000300
+           // PARM.COBOL='NOX'                                                     00000400
+        26 //SYSIN DD *                                                            00000500
+        30 //LKED.SYSPRINT DD DUMMY                                                00001025
+        41 //GO.FILEIN DD DSN=KC02580.P5G5M.DAT,DISP=SHR                           00001030
+        42 //GO.FILEIN2 DD DSN=KC02580.P5G5T.DAT,DISP=SHR                          00001100
+        43 //GO.FILEOUT DD SYSOUT=A                                                00001200
+        44 //GO.RPTOUT DD SYSOUT=A                                                 00001300
+        45 //GO.ERROUT DD SYSOUT=A                                                 00001400
+        46 //GO.SYSOUT DD SYSOUT=A                                                 00001500
+  STMT NO. MESSAGE
+         2 IEFC001I PROCEDURE IGYWCLG WAS EXPANDED USING SYSTEM LIBRARY USER.PROCLIB
+        35 IEF686I DDNAME REFERRED TO ON DDNAME KEYWORD IN PRIOR STEP WAS NOT RESOLVED
+ ICH70001I KC03CE3  LAST ACCESS AT 15:14:56 ON TUESDAY, APRIL 30, 2019
+ IEF142I KC03CE3X COBOL STEP2 - STEP WAS EXECUTED - COND CODE 0000
+ IEF373I STEP/COBOL   /START 2019120.1519
+ IEF032I STEP/COBOL   /STOP  2019120.1519
+         CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:  8896K  SYS:   308K  EXT:  1579892K  SYS:    11544K
+         ATB- REAL:                    24K  SLOTS:                     0K
+              VIRT- ALLOC:       4M SHRD:       0M
+ IEF142I KC03CE3X LKED STEP2 - STEP WAS EXECUTED - COND CODE 0000
+ IEF373I STEP/LKED    /START 2019120.1519
+ IEF032I STEP/LKED    /STOP  2019120.1519
+         CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:    88K  SYS:   292K  EXT:     1640K  SYS:    11488K
+         ATB- REAL:                     0K  SLOTS:                     0K
+              VIRT- ALLOC:       0M SHRD:       0M
+ IEF142I KC03CE3X GO STEP2 - STEP WAS EXECUTED - COND CODE 0000
+ IEF373I STEP/GO      /START 2019120.1519
+ IEF032I STEP/GO      /STOP  2019120.1519
+         CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:   120K  SYS:   384K  EXT:     2952K  SYS:    11544K
+         ATB- REAL:                     0K  SLOTS:                     0K
+              VIRT- ALLOC:       0M SHRD:       0M
+ IEF375I  JOB/KC03CE3X/START 2019120.1519
+ IEF033I  JOB/KC03CE3X/STOP  2019120.1519
+         CPU:     0 HR  00 MIN  00.02 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0                         Date 04/30/2019  Time 15:19:03   Page     1
+0Invocation parameters:
+  NOX
+0Options in effect:
+  NOADATA
+    ADV
+    QUOTE
+    ARITH(COMPAT)
+  NOAWO
+  NOBLOCK0
+    BUFSIZE(4096)
+  NOCICS
+    CODEPAGE(1140)
+  NOCOMPILE(S)
+  NOCURRENCY
+    DATA(31)
+  NODATEPROC
+    DBCS
+  NODECK
+  NODIAGTRUNC
+  NODLL
+  NODUMP
+  NODYNAM
+  NOEXIT
+  NOEXPORTALL
+  NOFASTSRT
+    FLAG(I,I)
+  NOFLAGMIG4
+  NOFLAGSTD
+    INTDATE(ANSI)
+    LANGUAGE(EN)
+  NOLIB
+    LINECOUNT(60)
+  NOLIST
+  NOMAP
+  NOMDECK
+  NONAME
+    NSYMBOL(NATIONAL)
+  NONUMBER
+    NUMPROC(NOPFD)
+    OBJECT
+  NOOFFSET
+  NOOPTIMIZE
+    OUTDD(SYSOUT)
+    PGMNAME(COMPAT)
+    RENT
+    RMODE(AUTO)
+    SEQUENCE
+    SIZE(MAX)
+    SOURCE
+    SPACE(1)
+  NOSQL
+    SQLCCSID
+  NOSSRANGE
+  NOTERM
+  NOTEST
+  NOTHREAD
+    TRUNC(STD)
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0                         Date 04/30/2019  Time 15:19:03   Page     2
+0 NOVBREF
+  NOWORD
+    XMLPARSE(XMLSS)
+  NOXREF
+    YEARWINDOW(1900)
+    ZWB
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               BILL      Date 04/30/2019  Time 15:19:03   Page     3
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000001                IDENTIFICATION DIVISION.                                         00000700
+   000002                PROGRAM-ID. BILL.                                                00000701
+   000003               *Written by Diem Dao and Zi Wen                                   00000702
+   000004               *Final project group5 CSCE205, April 2019                         00000703
+   000005                ENVIRONMENT DIVISION.                                            00000704
+   000006                INPUT-OUTPUT SECTION.                                            00000705
+   000007                FILE-CONTROL.                                                    00000706
+   000008                    SELECT OLD-MASTER-FILE                                       00000707
+   000009                         ASSIGN TO FILEIN.                                       00000708
+   000010                    SELECT TRANS-FILE                                            00000709
+   000011                         ASSIGN TO FILEIN2.                                      00000710
+   000012                    SELECT NEW-MASTER-FILE                                       00000711
+   000013                         ASSIGN TO FILEOUT.                                      00000712
+   000014                    SELECT TRANS-REPORT                                          00000713
+   000015                         ASSIGN TO RPTOUT.                                       00000714
+   000016                    SELECT ERROR-REPORT                                          00000715
+   000017                         ASSIGN TO ERROUT.                                       00000716
+   000018                DATA DIVISION.                                                   00000717
+   000019                FILE SECTION.                                                    00000718
+   000020                FD  OLD-MASTER-FILE                                              00000719
+   000021                     RECORDING MODE IS F.                                        00000720
+   000022                01  OLD-MASTER-RECORD     PIC X(32).                             00000721
+   000023                                                                                 00000722
+   000024                FD  TRANS-FILE                                                   00000723
+   000025                     RECORDING MODE IS F.                                        00000724
+   000026                01  TRANS-RECORD          PIC X(34).                             00000725
+   000027                                                                                 00000726
+   000028                FD  NEW-MASTER-FILE                                              00000727
+   000029                     RECORDING MODE IS F.                                        00000728
+   000030                01  NEW-MASTER-RECORD     PIC X(70).                             00000729
+   000031                                                                                 00000730
+   000032                FD  TRANS-REPORT                                                 00000731
+   000033                     RECORDING MODE IS F.                                        00000732
+   000034                01  REPORT-LINE           PIC X(70).                             00000733
+   000035                                                                                 00000734
+   000036                FD  ERROR-REPORT                                                 00000735
+   000037                     RECORDING MODE IS F.                                        00000736
+   000038                01  ERROR-LINE            PIC X(32).                             00000737
+   000039                                                                                 00000738
+   000040                WORKING-STORAGE SECTION.                                         00000739
+   000041               *Switches                                                         00000740
+   000042                01 WS-SWITCHES.                                                  00000741
+   000043                   05 MS-EOF-SWITCH         PIC X.                               00000742
+   000044                      88 MS-MASTER-EOF      VALUE 'E'.                           00000743
+   000045                      88 MS-MASTER-NOT-EOF  VALUE 'N'.                           00000744
+   000046                   05 TS-EOF-SWITCH         PIC X.                               00000745
+   000047                      88 TS-TRANS-EOF       VALUE 'E'.                           00000746
+   000048                      88 TS-TRANS-NOT-EOF   VALUE 'N'.                           00000747
+   000049                   05 MS-READ-MSTR-SWITCH   PIC X.                               00000748
+   000050                      88 MS-READ-MASTER     VALUE 'T'.                           00000749
+   000051                      88 MS-NOT-READ-MASTER VALUE 'F'.                           00000750
+   000052                   05 TS-READ-TRANS-SWITCH  PIC X.                               00000751
+   000053                      88 TS-READ-TRANS      VALUE 'T'.                           00000760
+   000054                      88 TS-NOT-READ-TRANS  VALUE 'F'.                           00000770
+   000055                   05 WS-TRANS-PROC-SWITCH  PIC X.                               00000780
+   000056                      88 WS-TRANS-PROC      VALUE 'P'.                           00000790
+   000057                      88 WS-TRANS-NOT-PROC  VALUE 'N'.                           00000791
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               BILL      Date 04/30/2019  Time 15:19:03   Page     4
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000058                                                                                 00000792
+   000059                01  AW-ARITHMETIC-WORK-AREAS.                                    00000793
+   000060               *****05  AW-EVENT-COUNTER      PIC 999.                           00000794
+   000061                    05  AW-FEE-ACCUMULATOR    PIC 9(4).                          00000795
+   000062                                                                                 00000796
+   000063               *Input data                                                       00000797
+   000064                01  IN-MASTER-RECORD.                                            00000798
+   000065                    05 IN-NAME.                                                  00000799
+   000066                       10 IN-LAST-NAME PIC X(9).                                 00000800
+   000067                       10 IN-FIRST-NAME PIC X(9).                                00000801
+   000068                    05 IN-PHONE   PIC 9(10).                                     00000802
+   000069                    05 IN-PAID   PIC 9(4).                                       00000803
+   000070               *Transaction Record                                               00000804
+   000071                01 TR-TRANS-RECORD.                                              00000805
+   000072                   05 TR-PHONE  PIC 9(10).                                       00000806
+   000073                   05 TR-TEST   PIC X(20).                                       00000807
+   000074                   05 TR-COST   PIC 9(4).                                        00000808
+   000075                                                                                 00000809
+   000076               *Output for master line                                           00000810
+   000077                01 IL-LINE.                                                      00000811
+   000078                   05     PIC X VALUE SPACES.                                    00000812
+   000079                   05 IL-LAST-NAME  PIC X(9).                                    00000813
+   000080                   05     PIC X VALUE SPACES.                                    00000814
+   000081                   05 IL-FIRST-NAME  PIC X(9).                                   00000815
+   000082                   05     PIC X VALUE SPACES.                                    00000816
+   000083                   05 IL-PHONE     PIC XXXBXXXBXXXX.                             00000817
+   000084                                                                                 00000821
+   000085               *Report transaction line                                          00000822
+   000086                01 RL-REPORT-LINE.                                               00000823
+   000087                   05    PIC X(10) VALUE SPACES.                                 00000824
+   000088                   05 RL-TEST  PIC X(20).                                        00000825
+   000089                   05    PIC X(3) VALUE SPACES.                                  00000826
+   000090                   05 RL-FEE   PIC $ZZ99.                                        00000827
+   000091                                                                                 00000828
+   000092               *Error report line                                                00000829
+   000093                01 ER-ERROR-LINE.                                                00000830
+   000094                   05   PIC X(18) VALUE 'ERROR IN RECORD:  '.                    00000831
+   000095                   05 ER-ERROR-REC    PIC X(13).                                 00000832
+   000096                                                                                 00000833
+   000097                01 TL-TOTAL-LINE.                                                00000834
+   000098                   05    PIC X(10) VALUE SPACES.                                 00000835
+   000099               *   05    PIC X(21) VALUE '        TOTAL TESTS  '.                00000836
+   000100                   05 TL-TOTAL-TESTS  PIC Z9.                                    00000837
+   000101                   05    PIC X(20) VALUE '        TOTAL FEES  '.                 00000838
+   000102                   05 TL-TOTAL-FEES   PIC $ZZZ99.                                00000839
+   000103                                                                                 00000840
+   000104               *Headings                                                         00000841
+   000105                01 H0-HEADINGS.                                                  00000842
+   000106                   05    PIC X(8) VALUE SPACES.                                  00000843
+   000107                   05    PIC X(16) VALUE 'HOSPITAL SUMMARY'.                     00000844
+   000108                   05    PIC X(5) VALUE SPACES.                                  00000845
+   000109                   05 H0-MONTH       PIC XX.                                     00000846
+   000110                   05                PIC X VALUE '/'.                            00000847
+   000111                   05 H0-DAY         PIC XX.                                     00000848
+   000112                   05                PIC X VALUE '/'.                            00000849
+   000113                   05 H0-YEAR        PIC XXXX.                                   00000850
+   000114                                                                                 00000851
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               BILL      Date 04/30/2019  Time 15:19:03   Page     5
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000115                01 H1-HEADINGS.                                                  00000852
+   000116                   05    PIC X(10) VALUE SPACES.                                 00000853
+   000117                   05    PIC X(4) VALUE 'TEST'.                                  00000854
+   000118                   05    PIC X(13) VALUE SPACES.                                 00000855
+   000119                   05    PIC X(9) VALUE '      FEE'.                             00000856
+   000120                                                                                 00000857
+   000121                PROCEDURE DIVISION.                                              00000858
+   000122                000-PRINT-EVENT-REPORT.                                          00000859
+   000123                    OPEN INPUT OLD-MASTER-FILE                                   00000860
+   000124                               TRANS-FILE                                        00000861
+   000125                         OUTPUT NEW-MASTER-FILE                                  00000862
+   000126                                TRANS-REPORT                                     00000863
+   000127                                ERROR-REPORT                                     00000864
+   000128                                                                                 00000865
+   000129                    PERFORM 100-INITIALIZE                                       00000866
+   000130                    PERFORM UNTIL MS-MASTER-EOF AND                              00000867
+   000131                                  TS-TRANS-EOF                                   00000868
+   000132      1                PERFORM 200-GET-NEXT-RECORD                               00000869
+   000133      1                PERFORM 300-PROCESS-RECORD                                00000870
+   000134                                                                                 00000871
+   000135                     END-PERFORM                                                 00000872
+   000136                     CLOSE OLD-MASTER-FILE                                       00000873
+   000137                           TRANS-FILE                                            00000874
+   000138                           NEW-MASTER-FILE                                       00000875
+   000139                           TRANS-REPORT                                          00000876
+   000140                           ERROR-REPORT                                          00000877
+   000141                     STOP RUN.                                                   00000878
+   000142                                                                                 00000879
+   000143                100-INITIALIZE.                                                  00000880
+   000144                    SET  MS-READ-MASTER                                          00000881
+   000145                         TS-READ-TRANS                                           00000882
+   000146                         MS-MASTER-NOT-EOF                                       00000883
+   000147                         TS-TRANS-NOT-EOF TO TRUE                                00000884
+   000148                    INITIALIZE AW-ARITHMETIC-WORK-AREAS                          00000885
+   000149                    MOVE FUNCTION CURRENT-DATE (1:4) TO H0-YEAR                  00000886
+   000150                    MOVE FUNCTION CURRENT-DATE (5:2) TO H0-MONTH                 00000887
+   000151                    MOVE FUNCTION CURRENT-DATE (7:2) TO H0-DAY                   00000888
+   000152                    .                                                            00000889
+   000153                                                                                 00000890
+   000154                200-GET-NEXT-RECORD.                                             00000891
+   000155                    EVALUATE MS-READ-MASTER ALSO TS-READ-TRANS                   00000892
+   000156               *    -----------------           --------------                   00000893
+   000157                         WHEN    TRUE         ALSO     TRUE                      00000894
+   000158               *    -----------------           --------------                   00000895
+   000159      1                      PERFORM 800-READ-MASTER-RECORD                      00000896
+   000160      1                      PERFORM 820-READ-TRANS-RECORD                       00000897
+   000161      1                      SET MS-NOT-READ-MASTER                              00000898
+   000162      1                          TS-NOT-READ-TRANS                               00000899
+   000163      1                          WS-TRANS-NOT-PROC TO TRUE                       00000900
+   000164               *    -----------------           --------------                   00000901
+   000165                         WHEN    TRUE         ALSO     FALSE                     00000902
+   000166               *    -----------------           --------------                   00000903
+   000167      1                      PERFORM 800-READ-MASTER-RECORD                      00000904
+   000168      1                      SET MS-NOT-READ-MASTER                              00000905
+   000169      1                          WS-TRANS-NOT-PROC TO TRUE                       00000906
+   000170               *    -----------------         ----------------                   00000907
+   000171                         WHEN    FALSE         ALSO     TRUE                     00000908
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               BILL      Date 04/30/2019  Time 15:19:03   Page     6
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000172               *    -----------------         ----------------                   00000909
+   000173      1                      PERFORM 820-READ-TRANS-RECORD                       00000910
+   000174      1                      SET TS-NOT-READ-TRANS TO TRUE                       00000911
+   000175                    END-EVALUATE                                                 00000912
+   000176                    .                                                            00000913
+   000177                                                                                 00000914
+   000178                300-PROCESS-RECORD.                                              00000915
+   000179                    EVALUATE                                                     00000916
+   000180                          TS-TRANS-EOF  ALSO MS-MASTER-EOF                       00000917
+   000181               *          ------------       --------------                      00000918
+   000182               *          NOT END OF FILE                                        00000919
+   000183                      WHEN     FALSE     ALSO     FALSE                          00000920
+   000184               *          ------------       -------------                       00000921
+   000185      1             EVALUATE TRUE                                                00000922
+   000186      1               WHEN IN-PHONE = TR-PHONE                                   00000923
+   000187      2                 PERFORM 400-PROCESS-TRANS                                00000924
+   000188      2                 SET TS-READ-TRANS                                        00000925
+   000189      2                     WS-TRANS-PROC TO TRUE                                00000926
+   000190                                                                                 00000927
+   000191      1               WHEN IN-PHONE < TR-PHONE                                   00000928
+   000192      2                 IF WS-TRANS-PROC                                         00000929
+   000193      3                   PERFORM 500-PROCESS-MASTER                             00000930
+   000194      2                 ELSE                                                     00000931
+   000195      3                   PERFORM 550-PROCESS-UNMATCHED-MASTER                   00000932
+   000196      2                 END-IF                                                   00000933
+   000197      2                 SET MS-READ-MASTER TO TRUE                               00000934
+   000198      1               WHEN IN-PHONE > TR-PHONE                                   00000935
+   000199      2                 PERFORM 600-PROCESS-UNMATCHED-TRANS                      00000936
+   000200      2                 SET TS-READ-TRANS TO TRUE                                00000937
+   000201      1             END-EVALUATE                                                 00000938
+   000202               *    END OF TRANSACTION FILE                                      00000939
+   000203                      WHEN     TRUE      ALSO    FALSE                           00000940
+   000204               *          ---------------     -------------                      00000941
+   000205      1                 IF WS-TRANS-PROC                                         00000942
+   000206      2                   PERFORM  500-PROCESS-MASTER                            00000943
+   000207      1                 ELSE                                                     00000944
+   000208      2                   PERFORM 550-PROCESS-UNMATCHED-MASTER                   00000945
+   000209      1                 END-IF                                                   00000946
+   000210      1                 SET  MS-READ-MASTER TO TRUE                              00000947
+   000211               *    END OF MASTER FILE                                           00000948
+   000212                      WHEN    FALSE      ALSO     TRUE                           00000949
+   000213               *          --------------      -------------                      00000950
+   000214      1                 PERFORM 600-PROCESS-UNMATCHED-TRANS                      00000951
+   000215      1                 SET TS-READ-TRANS TO TRUE                                00000952
+   000216                    END-EVALUATE                                                 00000953
+   000217                    .                                                            00000954
+   000218                                                                                 00000955
+   000219                400-PROCESS-TRANS.                                               00000956
+   000220                    IF WS-TRANS-NOT-PROC                                         00000957
+   000221      1               PERFORM  900-PRINT-HEADINGS                                00000958
+   000222      1               INITIALIZE AW-ARITHMETIC-WORK-AREAS                        00000959
+   000223                    END-IF                                                       00000960
+   000224               *    ADD 1 TO AW-EVENT-COUNTER                                    00000961
+   000225                    ADD TR-COST TO AW-FEE-ACCUMULATOR                            00000962
+   000226                    MOVE TR-TEST TO RL-TEST                                      00000963
+   000227                    MOVE TR-COST TO RL-FEE                                       00000964
+   000228                    MOVE RL-REPORT-LINE TO REPORT-LINE                           00000965
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               BILL      Date 04/30/2019  Time 15:19:03   Page     7
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000229                    WRITE REPORT-LINE                                            00000966
+   000230                    .                                                            00000967
+   000231                                                                                 00000968
+   000232                500-PROCESS-MASTER.                                              00000969
+   000233                    IF WS-TRANS-PROC                                             00000970
+   000234      1                PERFORM 520-PRINT-TOTAL-LINE                              00000971
+   000235                    END-IF                                                       00000972
+   000236                    ADD AW-FEE-ACCUMULATOR TO IN-PAID                            00000973
+   000237               *    ADD AW-EVENT-COUNTER TO                                      00000974
+   000238                    MOVE IN-MASTER-RECORD TO NEW-MASTER-RECORD                   00000975
+   000239                    WRITE NEW-MASTER-RECORD                                      00000976
+   000240                    .                                                            00000977
+   000241                520-PRINT-TOTAL-LINE.                                            00000978
+   000242                    MOVE AW-FEE-ACCUMULATOR TO TL-TOTAL-FEES                     00000979
+   000243               *    MOVE AW-EVENT-COUNTER TO TL-TOTAL-TESTS                      00000980
+   000244                    MOVE TL-TOTAL-LINE TO REPORT-LINE                            00000981
+   000245                    WRITE REPORT-LINE                                            00000982
+   000246                           AFTER ADVANCING 2 LINES                               00000983
+   000247                    .                                                            00000984
+   000248                550-PROCESS-UNMATCHED-MASTER.                                    00000985
+   000249                    MOVE IN-MASTER-RECORD TO NEW-MASTER-RECORD                   00000986
+   000250                    WRITE NEW-MASTER-RECORD                                      00000987
+   000251                    .                                                            00000988
+   000252                600-PROCESS-UNMATCHED-TRANS.                                     00000989
+   000253                    MOVE TR-TRANS-RECORD TO ER-ERROR-REC                         00000990
+   000254                    MOVE ER-ERROR-LINE TO ERROR-LINE                             00000991
+   000255                    WRITE ERROR-LINE                                             00000992
+   000256                        AFTER ADVANCING 1 LINE                                   00000993
+   000257                    .                                                            00000994
+   000258                800-READ-MASTER-RECORD.                                          00000995
+   000259                    READ OLD-MASTER-FILE                                         00000996
+   000260                        INTO IN-MASTER-RECORD                                    00000997
+   000261                    AT END                                                       00000998
+   000262      1                 SET MS-MASTER-EOF TO TRUE                                00000999
+   000263                    END-READ                                                     00001000
+   000264                    .                                                            00001001
+   000265                820-READ-TRANS-RECORD.                                           00001002
+   000266                     READ TRANS-FILE                                             00001003
+   000267                        INTO TR-TRANS-RECORD                                     00001004
+   000268                     AT END                                                      00001005
+   000269      1                 SET TS-TRANS-EOF TO TRUE                                 00001006
+   000270                     END-READ                                                    00001007
+   000271                     .                                                           00001008
+   000272                900-PRINT-HEADINGS.                                              00001009
+   000273                     MOVE H0-HEADINGS TO REPORT-LINE                             00001010
+   000274                     WRITE REPORT-LINE                                           00001011
+   000275                     MOVE IN-LAST-NAME TO IL-LAST-NAME                           00001012
+   000276                     MOVE IN-FIRST-NAME TO IL-FIRST-NAME                         00001013
+   000277                     MOVE IN-PHONE TO IL-PHONE                                   00001014
+   000278                     INSPECT IL-PHONE                                            00001015
+   000279                         REPLACING ALL SPACES BY '-'                             00001016
+   000280                     MOVE IL-LINE TO REPORT-LINE                                 00001017
+   000281                     WRITE REPORT-LINE                                           00001018
+   000282                         AFTER ADVANCING 2 LINES                                 00001019
+   000283                     MOVE H1-HEADINGS TO REPORT-LINE                             00001020
+   000284                     WRITE REPORT-LINE                                           00001021
+   000285                         AFTER ADVANCING 2 LINES                                 00001022
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               BILL      Date 04/30/2019  Time 15:19:03   Page     8
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000286                     .                                                           00001023
+-* Statistics for COBOL program BILL:
+ *    Source records = 286
+ *    Data Division statements = 50
+ *    Procedure Division statements = 71
+0End of compilation 1,  program BILL,  no statements flagged.
+0Return code 0
+ Brewer   Brooke   21210329410030
+ Manuel   Barbara  25123528930300
+ Dennis   Thomas   31844991451000
+ James    Wagner   37631182670111
+ Ellis    Mary     44398037791775
+ Clinton  Eaton    61958441471000
+ Myers    Jessica  63403396601144
+ Green    Bethany  64619329422000
+ Ruiz     Adam     66255301290900
+ Needham  James    71720291460123
+ Richard  Tanner   73238491090312
+ LakesheiaMiller   77586287610999
+ Drummond Mike     80112344452585
+ Johnson  Matt     80188922892020
+ Jones    Jack     80323099901460
+ Smith    John     80381122330090
+ Jones    Bridgette80398709560111
+ Whitacre Cody     80662469224209
+ Miller   Michael  81687849910123
+ Coleman  Kayla    84365314545360
+ Jackson  Mary     84365344433001
+ DickersonTimothy  85638324853030
+ Greene   Henry    90822104561111
+ Bennett  Timothy  91728384920100
+ Lily     Collet   98972987650111
+         HOSPITAL SUMMARY     04/30/2019
+0 Ellis     Mary      443-980-3779
+0          TEST                   FEE
+           Blood Test             $ 200
+           Physical Examination   $ 923
+           Genetic Testing        $ 452
+0                    TOTAL FEES  $ 1575
+         HOSPITAL SUMMARY     04/30/2019
+0 Myers     Jessica   634-033-9660
+0          TEST                   FEE
+           Blood Test             $ 239
+           Ultrasonography        $ 195
+           XRay                   $ 210
+0                    TOTAL FEES  $  644
+         HOSPITAL SUMMARY     04/30/2019
+0 Drummond  Mike      801-123-4445
+0          TEST                   FEE
+           Blood Test             $ 495
+           Genetic Testing        $  90
+           Medical Test           $1000
+0                    TOTAL FEES  $ 1585
+         HOSPITAL SUMMARY     04/30/2019
+0 Johnson   Matt      801-889-2289
+0          TEST                   FEE
+           Radiology              $ 762
+           XRay                   $ 298
+0                    TOTAL FEES  $ 1060
+         HOSPITAL SUMMARY     04/30/2019
+0 Jones     Jack      803-230-9990
+0          TEST                   FEE
+           Ultrasonography        $ 450
+           Pathology              $ 510
+0                    TOTAL FEES  $  960
+         HOSPITAL SUMMARY     04/30/2019
+0 Whitacre  Cody      806-624-6922
+0          TEST                   FEE
+           Genetic Testing        $3210
+0                    TOTAL FEES  $ 3210
+         HOSPITAL SUMMARY     04/30/2019
+0 Coleman   Kayla     843-653-1454
+0          TEST                   FEE
+           Genetic Testing        $1200
+           Medical Test           $9100
+           Radiology              $  60
+0                    TOTAL FEES  $  360
+         HOSPITAL SUMMARY     04/30/2019
+0 Dickerson Timothy   856-383-2485
+0          TEST                   FEE
+           Genetic Testing        $2031
+0                    TOTAL FEES  $ 2031
+
